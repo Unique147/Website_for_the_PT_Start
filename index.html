@@ -15,7 +15,7 @@
     <div class="container nav_bar">
         <div class="row">
             <div class="row">
-                <div class="col-3 nav_logo"><img src="C:\Users\Aleksander\Documents\PT-START\Website_for_the_PT_Start\image\aEGuglkn3ElGy_cWCRSsgG5W2mYXgIkwGnR_UIVFOELOLITz5nnAHdFthwkaQnr6DFFhm-x0WMWwDohu0OCuo-JL.jpg" alt="my_logo"> </div>
+                <div class="col-3 nav_logo"> </div>
                 <div class="col-9">
                     <div class="nav_text"><h1><b>Краткая информация обо мне:</b></h1></div>
                 </div>
@@ -33,5 +33,52 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="button_js col-12">
+                <button id="myButton">Click me</button>
+                <p id="demo"></p>
+            </div>
+        </div>    
+    </div>
+    <div class="container-registration">
+        <div class="row">
+            <div class="col-12">
+                <h1>Регистрация</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form method='POST' action='/registration.php'>
+                    <div class="row form__reg"><input class="form" type="email" name="email" placeholder="Email"></div>
+                    <div class="row form__reg"><input class="form" type="text" name="login" placeholder="Login"></div>
+                    <div class="row form__reg"><input class="form" type="password" name="password" placeholder="Password"></div>
+                    <button type="submit" class="btn_red btn_reg" name="submit">Продолжить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="C:\Users\Aleksander\Documents\PT-START\Website_for_the_PT_Start\image\file.js"></script>
 </body>
 </html>
+
+<?php
+require_once('db.php');
+ 
+$link = mysqli_connect('127.0.0.1', 'root', 'kali', 'first');
+ 
+if (isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $username = $_POST['login'];
+    $password = $_POST['password'];
+
+
+    if (!$email || !$username || !$password) die ('Пожалуйста введите все значения!');
+
+    $sql = "INSERT INTO users (email, username, pass) VALUES ('$email', '$username', '$pass')";
+
+    if(!mysqli_query($link, $sql)) {
+            echo "Не удалось добавить пользователя";
+    }
+}
+?>

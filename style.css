@@ -9,7 +9,7 @@ body {
     width: 300px;
     height: 300px;
 }
-.col-3 nav_logo {
+.nav_logo {
     background: url('../Website_for_the_PT_Start/image/aEGuglkn3ElGy_cWCRSsgG5W2mYXgIkwGnR_UIVFOELOLITz5nnAHdFthwkaQnr6DFFhm-x0WMWwDohu0OCuo-JL.jpg') no-repeat center center;
     background-size: 100%;
     width: 100px;
@@ -28,6 +28,55 @@ body {
 }
 .container {
     margin-top: 20px;
+}
+.button_js {
+    text-align: center;
+}
+#myButton {
+    color:blueviolet;
+    border: #b1c1f5;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: aqua;
+    width: 60px;
+    height: 60px;
+    font-family: 'Arial', sans-serif;
+}
+#demo img{
+    text-align: center;
+    margin-top: 100px;
+    width: 20%; 
+}
+
+.container-registration {
+    margin-top: 20px;
+    width: 70%; 
+    margin: 0 auto; 
+}
+
+.form__reg {
+    margin-bottom: 10px; 
+}
+
+.form {
+    width: 100%; 
+    padding: 10px; 
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+}
+
+.btn_red {
+    color: white;
+    background-color: #ff4d4d; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.btn_red:hover {
+    background-color: #cc0000; 
 }
 .row {
 }
