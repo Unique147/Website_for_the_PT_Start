@@ -15,16 +15,25 @@
 <div class="container">
     <div class="row">
         <div class="col-12 index">
-            <h1>Авторизуйтесь</h1>
-        <?php
-        if (!isset($_COOKIE['User'])) {
-            ?>
-                <a href="/registration.php">Зарегистрируйтесь</a> или <a href="/login.php">войдите</a>, чтобы просматривать контент!
+            <h1>Страница с постами</h1>
             <?php
-            } else {
-                require_once('db.php');
-            }
-        ?>
+        if (!isset($_COOKIE['User'])){
+        ?> 
+            <a href="/registration.php">Зарегистрируйтесь</a> или <a href="/login.php">войдите</a>, чтобы просматривать контент!
+            <?php
+        } else {
+            $link = mysqli_connect('127.0.0.1', 'root', 'parrot', 'first');
+            $sql = "SELECT * FROM posts";
+            $res = mysqli_query($link, $sql);
+            if (mysqli_num_rows($res) >  0) {
+                while ($post = mysqli_fetch_array($res)) {
+                    echo "<a href='/posts.php?id=" . $post["id"] . "'>" . $post['title'] . "</a><br>";
+                }
+               } else {
+                    echo "Записей пока нет";
+               }
+
+        }?>
         </div>
     </div>
 </div>

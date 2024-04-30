@@ -1,3 +1,9 @@
+<?php 
+if (isset($_COOKIE['User'])) {
+    header("Location: login.php");
+    exit; 
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

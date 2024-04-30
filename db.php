@@ -8,7 +8,7 @@ $link = mysqli_connect($servername, $username, $password);
 
 
 if (!$link) {
-  die("Ошибка подключения: " . mysqli_connection_error());
+  die("Ошибка подключения: " . mysqli_connect_error());
 }
 
 $sql = "CREATE DATABASE IF NOT EXISTS $dbName";
