@@ -25,8 +25,5 @@ $main_text = $rows['main_text'];
 echo "<h1>$title</h1>";
 echo "<p>$main_text</p>"; 
 ?>
-
-
-
 </body>
 </html>
