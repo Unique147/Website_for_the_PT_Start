@@ -39,7 +39,7 @@ if (isset($_COOKIE['User'])) {
 <?php
 require_once('db.php');
 
-$link = mysqli_connect('127.0.0.1', 'root', 'parrot', 'first');
+$link = mysqli_connect('db', 'root', 'parrot', 'first');
  
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
