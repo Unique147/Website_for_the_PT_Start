@@ -46,7 +46,11 @@
 
 set_time_limit (0);
 $VERSION = "1.0";
+<<<<<<< HEAD
 $ip = 'db';  // CHANGE THIS
+=======
+$ip = '127.0.0.1';  // CHANGE THIS
+>>>>>>> 0764fffc53745f37a83f621a4586666bc041f712
 $port = 1234;       // CHANGE THIS
 $chunk_size = 1400;
 $write_a = null;
